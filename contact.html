@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Verdant Vistas | Contact Our Gardening Sanctuary</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: clean & organic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafff2;
+            color: #1a2e1f;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, .logo, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        header {
+            background: #0f3b1c;
+            color: #f5fce3;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,20,0,0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #c0e87a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #eef5da;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.05rem;
+        }
+        .nav-links a:hover {
+            color: #dcf59b;
+            transform: translateY(-1px);
+        }
+        .nav-links li {
+            list-style: none;
+        }
+
+        /* contact hero */
+        .contact-hero {
+            background: linear-gradient(120deg, #d4e8c2, #c0dfaa);
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+        .contact-hero h1 {
+            font-size: 3rem;
+            color: #144d1f;
+            margin-bottom: 16px;
+        }
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #2a4727;
+        }
+
+        /* contact grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 60px 0;
+        }
+
+        /* contact info cards */
+        .info-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+            height: 100%;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 35px rgba(50,80,20,0.1);
+        }
+        .info-icon {
+            font-size: 2.4rem;
+            color: #3f9e3b;
+            margin-bottom: 20px;
+            background: #eef5e4;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+        }
+        .info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1d5e23;
+        }
+        .info-detail {
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .info-detail i {
+            width: 28px;
+            color: #548c2f;
+            font-size: 1.2rem;
+        }
+        .info-detail a {
+            color: #1a3b1a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b3d48b;
+        }
+        .info-detail a:hover {
+            color: #2a7a2a;
+        }
+        .social-links-contact {
+            margin-top: 28px;
+            display: flex;
+            gap: 20px;
+        }
+        .social-links-contact a {
+            background: #e8f0df;
+            width: 44px;
+            height: 44px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c6e2f;
+            font-size: 1.5rem;
+            transition: 0.2s;
+        }
+        .social-links-contact a:hover {
+            background: #cbe0b2;
+            color: #1c531f;
+            transform: scale(1.05);
+        }
+
+        /* form styling */
+        .form-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+        .form-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #1d5e23;
+        }
+        .form-card p {
+            margin-bottom: 24px;
+            color: #3e5538;
+        }
+        .form-group {
+            margin-bottom: 22px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid #ddecd0;
+            border-radius: 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: #fefef8;
+            transition: 0.2s;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #4cae4c;
+            box-shadow: 0 0 0 3px rgba(76,174,76,0.2);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .btn-submit {
+            background: #2c6e2f;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-submit:hover {
+            background: #1d5420;
+            transform: scale(1.01);
+        }
+        .success-message {
+            background: #e0f2d6;
+            color: #1b5e1f;
+            padding: 14px;
+            border-radius: 32px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .green-well {
+            background: #eef6e4;
+            border-radius: 48px;
+            padding: 32px 35px;
+            margin: 40px 0 50px;
+        }
+
+        /* faq section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 28px;
+            margin: 40px 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        .faq-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2a752a;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            margin: 30px 0 20px 0;
+            border-left: 8px solid #3f9e3b;
+            padding-left: 20px;
+            color: #1a441f;
+        }
+        footer {
+            background: #0c2f14;
+            color: #d9e6c3;
+            padding: 48px 0 32px;
+            margin-top: 50px;
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        .footer-address i, .footer-phone i {
+            margin-right: 12px;
+            width: 26px;
+            color: #b6da7a;
+        }
+        .footer-address, .footer-phone {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            border-top: 1px solid #2f613a;
+            padding-top: 24px;
+        }
+        @media (max-width: 880px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .contact-hero h1 { font-size: 2.4rem; }
+            .section-title { font-size: 1.9rem; }
+        }
+        .stat-badge {
+            background: #d9f0c5;
+            border-radius: 60px;
+            padding: 4px 18px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2b6b2a;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav-flex">
+        <div class="logo">Verdant<span>Vistas</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- hero section -->
+    <div class="contact-hero">
+        <div class="container">
+            <h1>🌻 Cultivate a Connection</h1>
+            <p>Reach out to our gardening stewards — whether it's a question about heirloom seeds, soil biology, or simply to share your green journey. We're rooted in community.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- contact grid: info & form -->
+        <div class="contact-grid">
+            <!-- left side: contact information + garden location -->
+            <div class="info-card">
+                <div class="info-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Verdant Vistas <br>Garden Sanctuary</h3>
+                <div class="info-detail">
+                    <i class="fas fa-map-marker-alt"></i> <span>Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923</span>
+                </div>
+                <div class="info-detail">
+                    <i class="fas fa-phone-alt"></i> <span>+1 (831) 764-0923</span>
+                </div>
+                <div class="info-detail">
+                    <i class="fas fa-envelope"></i> <span><a href="mailto:hello@verdantvistas.com">hello@verdantvistas.com</a></span>
+                </div>
+                <div class="info-detail">
+                    <i class="fas fa-clock"></i> <span>Mon–Fri: 9am–5pm PST | Sat: 10am–3pm (Garden walk-in hours)</span>
+                </div>
+                <div class="info-detail">
+                    <i class="fas fa-seedling"></i> <span>Workshop inquiries & speaking events: <strong>workshops@verdantvistas.com</strong></span>
+                </div>
+                <div class="social-links-contact">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div style="margin-top: 28px; background: #f3f9eb; border-radius: 28px; padding: 18px;">
+                    <i class="fas fa-tree" style="margin-right: 10px; color:#498d32;"></i> 
+                    <strong>Visit our display gardens</strong> — open to the public April–October. Self-guided tours, pollinator trails, and a 2-acre heirloom vegetable sanctuary. Contact us to book group tours.
+                </div>
+            </div>
+
+            <!-- right side: contact form with simple javascript simulation -->
+            <div class="form-card">
+                <h3><i class="fas fa-pen-fancy"></i> Send us a rooted message</h3>
+                <p>We’d love to hear about your gardening projects, questions about our 78k+ word almanac, or partnership ideas. We reply within 48 hours.</p>
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email address *" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="inquiryType" name="inquiryType">
+                            <option value="gardening-advice">🌱 Gardening Advice / Plant Health</option>
+                            <option value="workshop">🌿 Workshops & Events</option>
+                            <option value="partnership">🤝 Partnership / Press</option>
+                            <option value="general">💬 General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your soil, your dreams, or your question... we're all ears (and trowels)." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Sow the message</button>
+                    <div id="formFeedback" style="margin-top: 16px;"></div>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 20px; color:#597a4b;"><i class="fas fa-lock"></i> Your info stays rooted in privacy — we never share with third parties.</p>
+            </div>
+        </div>
+
+        <!-- FAQ / unique contact info extension: gardening hotline & community hours -->
+        <div class="green-well">
+            <span class="stat-badge"><i class="fas fa-phone-alt"></i> gardener's hotline</span>
+            <h2 style="margin: 12px 0 8px;">🌾 Need immediate green advice?</h2>
+            <p><strong>Call our Master Gardener Helpline: +1 (831) 764-0923 ext. 112</strong> — Mon, Wed, Fri from 10am to 2pm PST. Get real-time solutions for pest outbreaks, watering schedules, or plant ID. For urgent cases, leave a voicemail and we’ll call back with tailored organic solutions. Also, you can reach our <strong>community seed library</strong> at seedlibrary@verdantvistas.com to request rare heirloom varieties.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; margin-top: 24px;">
+                <div><i class="fas fa-hand-holding-heart" style="color:#3f9e3b;"></i> <strong>Volunteer days:</strong> Every 2nd Saturday — join us for composting workshops & bed prep.</div>
+                <div><i class="fas fa-chalkboard-teacher"></i> <strong>Ask a botanist:</strong> Video consultation slots available (free for members).</div>
+            </div>
+        </div>
+
+        <!-- Frequently asked questions - gardening contact related -->
+        <h2 class="section-title">🌼 Frequently Asked Connections</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4><i class="fas fa-seedling"></i> How quickly do you reply?</h4>
+                <p>Our gardening team responds within 24–48 hours on business days. For urgent plant emergencies, call the helpline.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fas fa-map-marked-alt"></i> Can I visit Orvessa Vine Harbor?</h4>
+                <p>Absolutely! Our demonstration gardens are open April–Oct, Tue–Sat 10am–4pm. Free admission, donations support community outreach.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fas fa-chalkboard"></i> Do you offer gardening workshops?</h4>
+                <p>Yes — monthly workshops on composting, pruning, seed saving, and permaculture. Check our socials or email workshops@verdantvistas.com for schedule.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fas fa-hand-holding-usd"></i> Partnership or sponsored content?</h4>
+                <p>We collaborate with ethical, eco-friendly brands. Contact our partnerships team at collaborate@verdantvistas.com with proposals.</p>
+            </div>
+        </div>
+
+        <!-- additional unique content: map reference + snail mail + inspiring gardening quote -->
+        <div style="background: #fafef2; border-radius: 38px; padding: 32px; margin: 40px 0; border: 1px solid #cbe2b3;">
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: space-between;">
+                <div>
+                    <i class="fas fa-envelope-open-text" style="font-size: 2rem; color: #417d33;"></i>
+                    <h3 style="margin: 12px 0 8px;">Snail mail & botanical correspondence</h3>
+                    <p>Verdant Vistas — attn: Horticultural Department<br>42 Greenway Lane, Orvessa Vine Harbor, Willowdale, CA 93923, USA</p>
+                    <p>We accept pressed flowers, seed swaps, and handwritten garden stories for our community newsletter!</p>
+                </div>
+                <div style="text-align: center; background: #e5f0d9; padding: 18px 28px; border-radius: 50px;">
+                    <i class="fas fa-globe-americas"></i> <strong>Global Green Allies</strong><br>We partner with 12+ botanical sanctuaries worldwide.
+                </div>
+            </div>
+        </div>
+
+        <!-- visual touch: garden support pledge -->
+        <div style="text-align: center; margin: 20px 0 30px;">
+            <p style="font-style: italic; font-size: 1.1rem;">“Every message we receive is like watering a seed — we nurture it with care.” <br>— The Verdant Vistas Team</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-info">
+                <div class="footer-address"><i class="fas fa-map-marker-alt"></i> Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923</div>
+                <div class="footer-phone"><i class="fas fa-phone-alt"></i> +1 (831) 764-0923 | Gardening Hotline</div>
+                <div style="margin-top: 12px;"><i class="fas fa-envelope"></i> hello@verdantvistas.com</div>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-pinterest" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-youtube" style="font-size: 1.7rem;"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Verdant Vistas — Rooted in nature. Orvessa Vine Harbor: a sanctuary for growers. All gardening wisdom & visual content cultivated with care.
+        </div>
+    </div>
+</footer>
+
+<!-- simple JavaScript for form demo feedback (non-submit backend simulation) -->
+<script>
+    const form = document.getElementById('contactForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const msg = document.getElementById('message').value.trim();
+        if (!name || !email || !msg) {
+            feedbackDiv.innerHTML = '<div class="success-message" style="background:#fee2e2; color:#aa3e3e;"><i class="fas fa-exclamation-circle"></i> Please fill in all required fields (name, email, message).</div>';
+            return;
+        }
+        if (!email.includes('@')) {
+            feedbackDiv.innerHTML = '<div class="success-message" style="background:#fee2e2; color:#aa3e3e;"><i class="fas fa-envelope"></i> Enter a valid email address.</div>';
+            return;
+        }
+        // simulate sending
+        feedbackDiv.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Thank you, ' + escapeHtml(name) + '! Your message has been planted. Our gardening team will reply within 48h. Happy growing 🌿</div>';
+        form.reset();
+        setTimeout(() => {
+            feedbackDiv.innerHTML = '';
+        }, 6000);
+    });
+
+    function escapeHtml(str) {
+        if(!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if(m === '&') return '&amp;';
+            if(m === '<') return '&lt;';
+            if(m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+</script>
+</body>
+</html>

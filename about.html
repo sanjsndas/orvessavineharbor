@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Verdant Vistas | Our Story & Garden Philosophy</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: clean & organic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafff2;
+            color: #1a2e1f;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, .logo, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        header {
+            background: #0f3b1c;
+            color: #f5fce3;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,20,0,0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #c0e87a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #eef5da;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.05rem;
+        }
+        .nav-links a:hover {
+            color: #dcf59b;
+            transform: translateY(-1px);
+        }
+
+        /* hero about */
+        .about-hero {
+            background: linear-gradient(112deg, #cae3b4 0%, #dff0ce 100%);
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-size: 3.2rem;
+            color: #144d1f;
+            margin-bottom: 20px;
+        }
+        .about-hero p {
+            font-size: 1.25rem;
+            max-width: 760px;
+            margin: 0 auto;
+            color: #2a4727;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            margin: 50px 0 30px 0;
+            border-left: 8px solid #3f9e3b;
+            padding-left: 20px;
+            color: #1a441f;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 50px 0;
+            align-items: center;
+        }
+        .about-img {
+            width: 100%;
+            border-radius: 36px;
+            object-fit: cover;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+            background: #c2daa6;
+        }
+        .about-text p {
+            margin-bottom: 1.3rem;
+            font-size: 1.08rem;
+        }
+
+        .values-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+        .value-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            transition: all 0.25s;
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 30px rgba(60, 90, 20, 0.08);
+        }
+        .value-card i {
+            font-size: 2.8rem;
+            color: #3f9e3b;
+            margin-bottom: 20px;
+        }
+        .value-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 16px;
+            color: #1a5c21;
+        }
+
+        .green-well {
+            background: #eef6e4;
+            border-radius: 48px;
+            padding: 40px 35px;
+            margin: 50px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        .team-member {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+        }
+        .team-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background: #bdd6a0;
+        }
+        .team-member h4 {
+            font-size: 1.5rem;
+            margin: 20px 0 6px;
+            color: #23632a;
+        }
+        .team-member p {
+            padding: 0 20px 24px;
+            color: #3c5436;
+        }
+
+        .stat-badge {
+            background: #d9f0c5;
+            border-radius: 60px;
+            padding: 4px 18px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2b6b2a;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #0c2f14;
+            color: #d9e6c3;
+            padding: 48px 0 32px;
+            margin-top: 70px;
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        .footer-address i, .footer-phone i {
+            margin-right: 12px;
+            width: 26px;
+            color: #b6da7a;
+        }
+        .footer-address, .footer-phone {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            border-top: 1px solid #2f613a;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 780px) {
+            .about-hero h1 { font-size: 2.3rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.9rem; }
+        }
+        .btn-ghost {
+            background: #2c6e2f;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 60px;
+            display: inline-block;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 18px;
+            transition: 0.2s;
+        }
+        .btn-ghost:hover {
+            background: #1d5420;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav-flex">
+        <div class="logo">Verdant<span>Vistas</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms Of Privacy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies Policy</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- About Hero -->
+    <div class="about-hero">
+        <div class="container">
+            <h1>Rooted in Passion,<br> Growing with Purpose</h1>
+            <p>Verdant Vistas began as a tiny urban balcony garden and blossomed into a global sanctuary for growers, dreamers, and earth stewards. Our mission: to reconnect hands with soil and inspire regenerative abundance — one leaf, one lesson, one garden at a time.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- story + image section -->
+        <div class="about-grid">
+            <div>
+                <span class="stat-badge">🌱 since 2018</span>
+                <h2 style="font-size: 2rem; margin-bottom: 20px; color: #1a5420;">From Seed to Sanctuary</h2>
+                <p>Founded in the foggy hills of Willowdale by lifelong horticulturist Elara Moss and agroecologist Dr. Julian Hart, Verdant Vistas sprouted from a shared belief: gardening is the most radical, hopeful act of regeneration. What started as a small-scale community compost project evolved into a sprawling digital compendium — now nurturing over 78,000+ words of organic gardening wisdom, 350+ heirloom profiles, and a vibrant global network of backyard ecologists.</p>
+                <p>Our name honors the "verdant vistas" we strive to create: landscapes where biodiversity thrives, carbon is drawn down into rich humus, and every gardener discovers the profound joy of cultivating life. We don’t just teach techniques — we champion a holistic philosophy that merges ancestral practices with cutting-edge soil science, permaculture ethics, and creative expression. Whether you steward a windowsill herb pot or a five-acre food forest, you are part of this living tapestry.</p>
+                <a href="#" class="btn-ghost"><i class="fas fa-leaf"></i> Join our journey</a>
+            </div>
+            <div>
+                <img class="about-img" src="https://picsum.photos/id/124/700/500" alt="garden founders at work" loading="lazy">
+            </div>
+        </div>
+
+        <!-- values / pillars -->
+        <h2 class="section-title">🌻 Our Guiding Principles</h2>
+        <div class="values-cards">
+            <div class="value-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Regenerative Ethics</h3>
+                <p>We go beyond sustainability. Our practices restore soil microbiology, increase biodiversity, and leave land richer than we found it — from no-till methods to carbon farming in backyards.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-seedling"></i>
+                <h3>Heirloom Heritage</h3>
+                <p>Preserving genetic diversity through open-pollinated, rare and culturally significant varieties. Seed sovereignty is at our core — we support seed libraries and regional landrace adaptation.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-chalkboard-user"></i>
+                <h3>Accessible Education</h3>
+                <p>Gardening belongs to everyone. We break down complex topics into actionable guidance, offer free resources, and celebrate growers of all ages, abilities, and economic backgrounds.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-butterfly"></i>
+                <h3>Ecological Harmony</h3>
+                <p>Creating habitat corridors, pollinator sanctuaries, and wildlife-friendly spaces. Our advice never compromises the well-being of native bees, birds, or beneficial predators.</p>
+            </div>
+        </div>
+
+        <!-- deeper story: long-form narrative (rich content) -->
+        <div class="green-well">
+            <span class="stat-badge">📖 the story behind the soil</span>
+            <h2 style="margin: 0 0 16px 0;">Where Roots Meet Revolution</h2>
+            <p>In 2018, Elara Moss transformed a neglected urban lot in Orvessa Vine Harbor into a flourishing community garden using only salvaged materials, sheet mulching, and donated heirloom seeds. Neighbors gathered, children planted sunflowers taller than themselves, and the land became a living classroom. Meanwhile, Dr. Julian Hart was researching mycorrhizal networks and indigenous agroecological systems across the globe. Their chance meeting at a seed swap sparked an idea: what if they built a platform that combined rigorous science with heartfelt storytelling — a digital sanctuary that could inspire millions to pick up a trowel and reclaim their connection to living systems?</p>
+            <p>Today, Verdant Vistas has grown into a sprawling encyclopedia of regenerative horticulture, serving over 800,000 monthly gardeners worldwide. Our team includes master gardeners, permaculture designers, entomologists, and even a former chef who leads our edible landscaping initiatives. We’ve published detailed guides on Korean natural farming, rainwater harvesting in arid climates, pollinator-friendly hedgerows, and the art of soil blocking. But more importantly, we’ve cultivated a movement — one rooted in compassion for the Earth and for each other.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; margin: 28px 0 12px;">
+                <div><i class="fas fa-trowel" style="color: #367c2f;"></i> <strong>150+ free workshops</strong> hosted</div>
+                <div><i class="fas fa-tree" style="color: #367c2f;"></i> <strong>12,000+ trees</strong> planted via community partners</div>
+                <div><i class="fas fa-book-open" style="color: #367c2f;"></i> <strong>78,900+ words</strong> of living library content</div>
+            </div>
+            <p>Our headquarters remains in Willowdale, CA — a rustic farmhouse surrounded by trial gardens, a fruit tree nursery, and a lively composting hub. We welcome visitors for seasonal events, seed swaps, and our famous "tomato tasting festival." Verdant Vistas is a proud member of the Organic Seed Alliance and the Regenerative Agriculture Foundation. Every guide, image, and recommendation is field-tested in our own gardens and collaborator sites across 6 climate zones. We believe that gardening is not a hobby; it’s a form of activism, therapy, and ancestral reconnection.</p>
+        </div>
+
+        <!-- team member gallery with meaningful images -->
+        <h2 class="section-title">👩‍🌾 Meet the Cultivators</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img class="team-img" src="https://picsum.photos/id/20/400/350" alt="Elara Moss portrait" loading="lazy">
+                <h4>Elara Moss</h4>
+                <p>Founder & Creative Director — "I believe gardens grow gardeners as much as they grow food. My passion: edible landscapes and community seed sovereignty."</p>
+            </div>
+            <div class="team-member">
+                <img class="team-img" src="https://picsum.photos/id/26/400/350" alt="Dr. Julian Hart" loading="lazy">
+                <h4>Dr. Julian Hart</h4>
+                <p>Head of Agroecology — Soil microbiologist & permaculture designer. Over 20 years of research in mycorrhizal symbiosis and carbon farming.</p>
+            </div>
+            <div class="team-member">
+                <img class="team-img" src="https://picsum.photos/id/99/400/350" alt="Maya Chen" loading="lazy">
+                <h4>Maya Chen</h4>
+                <p>Lead Horticulturist — Specializes in urban intensive gardening, vertical systems, and drought-resilient design. Co-author of "The Pocket Orchard" guide.</p>
+            </div>
+            <div class="team-member">
+                <img class="team-img" src="https://picsum.photos/id/45/400/350" alt="Sam Rivera" loading="lazy">
+                <h4>Sam Rivera</h4>
+                <p>Pollinator & Wildlife Coordinator — Entomologist and native plant advocate. Designs pollinator corridors and runs our bee hotel certification program.</p>
+            </div>
+        </div>
+
+        <!-- additional unique content: philosophy, impact, educational commitment (long and dense) -->
+        <div style="margin: 40px 0 20px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+                <div style="flex: 1; min-width: 250px;">
+                    <i class="fas fa-globe-americas" style="font-size: 2.2rem; color: #3f9e3b; margin-bottom: 15px; display: block;"></i>
+                    <h3>🌍 Global Reach, Local Roots</h3>
+                    <p>Our content is translated into 7 languages, with regional adaptation guides for tropical, temperate, and mediterranean climates. We collaborate with grassroots organizations from Kenya to the Andes to ensure indigenous growing wisdom is honored and amplified. Every month we host free “ask a master gardener” livestreams and donate 5% of book sales to urban agriculture nonprofits.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <i class="fas fa-hand-sparkles" style="font-size: 2.2rem; color: #3f9e3b; margin-bottom: 15px; display: block;"></i>
+                    <h3>🧪 Field-Tested Innovation</h3>
+                    <p>From trialing 30 varieties of drought-tolerant tomatoes to refining no-dig methodologies on heavy clay, our team gardens are living laboratories. We share both successes and failures transparently — because every gardener learns from experimentation. Our upcoming trial focuses on climate-adaptive perennials and silvopasture edges for small holdings.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <i class="fas fa-children" style="font-size: 2.2rem; color: #3f9e3b; margin-bottom: 15px; display: block;"></i>
+                    <h3>🌱 Youth & Intergenerational Programs</h3>
+                    <p>We believe in sowing seeds early. Through our "Sprouts Initiative", we partner with schools and community centers to build sensory gardens, provide curriculum on plant life cycles, and mentor young people in leadership through urban farming. In 2025, we awarded 35 mini-grants to youth-led garden projects across the country.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- full commitment section & green promise -->
+        <div class="green-well" style="background: #e2efd4; margin-bottom: 30px;">
+            <h3 style="font-size: 1.8rem;">📜 The Verdant Vistas Promise</h3>
+            <p>We are committed to a future where gardening knowledge is free, inclusive, and grounded in ecological integrity. Our platform contains no sponsored synthetic fertilizer promotions — every recommendation meets rigorous organic and regenerative standards. We invest in carbon offset programs for our digital infrastructure, and all merchandise is plastic-free, using organic cotton and compostable packaging. Additionally, we maintain the "78K+ living library" as a dynamic, ever-expanding resource: new articles, how-to animations, and regional crop calendars are added weekly.</p>
+            <p><strong>Our deep ecology pledge:</strong> We actively advocate for policies that protect pollinators, expand community garden access, and preserve farmland from overdevelopment. We invite you to join us — whether you are tending a single pot or managing a homestead, your actions ripple outward. Through our collective care, we can restore ecosystems, cultivate food security, and find joy in the simplest of acts: a seed placed in soil with hope.</p>
+            <p><em>“Never doubt that a small group of thoughtful, committed gardeners can change the world; indeed, it's the only thing that ever has.” — adapted from Margaret Mead, with reverence for the earth.</em></p>
+            <a href="#" style="background: #2c6e2f; color: white; padding: 10px 26px; border-radius: 60px; display: inline-block; margin-top: 20px; text-decoration: none; font-weight: 500;"><i class="fas fa-seedling"></i> Discover our impact report</a>
+        </div>
+
+        <!-- last image + invitation -->
+        <div class="about-grid" style="margin-top: 20px;">
+            <div>
+                <img class="about-img" src="https://picsum.photos/id/143/700/500" alt="community garden volunteering" loading="lazy">
+            </div>
+            <div>
+                <span class="stat-badge">🤝 become part of our story</span>
+                <h2 style="font-size: 2rem; margin-bottom: 20px; color: #1a5420;">Come Grow With Us</h2>
+                <p>Verdant Vistas is more than a gardening resource — it’s a community. Visit our demonstration gardens in Willowdale, join one of our seasonal online courses, or volunteer at our annual seed distribution. We host hands-on workshops from grafting fruit trees to building insect hotels. Whether you're a beginner or seasoned grower, there's a place for you in our verdant family. Follow us on social media for daily gardening inspiration, or subscribe to our newsletter for exclusive heirloom giveaways and in-depth articles.</p>
+                <p>Our physical doors are open during daylight hours at the Orvessa Vine Harbor headquarters: 42 Greenway Lane — come say hello, stroll through the trial beds, and share your own gardening stories. Together, we cultivate not only plants but also connection, resilience, and hope.</p>
+                <a href="contact.html" class="btn-ghost"><i class="fas fa-envelope"></i> Reach out & visit</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-info">
+                <div class="footer-address"><i class="fas fa-map-marker-alt"></i> Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923</div>
+                <div class="footer-phone"><i class="fas fa-phone-alt"></i> +1 (831) 764-0923 | Gardening Hotline</div>
+                <div style="margin-top: 12px;"><i class="fas fa-envelope"></i> hello@verdantvistas.com</div>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-pinterest" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-youtube" style="font-size: 1.7rem;"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Verdant Vistas — Rooted in nature. Orvessa Vine Harbor: a sanctuary for growers. Our about page reflects our dedication to regenerative education and community.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

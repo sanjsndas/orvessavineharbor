@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Verdant Vistas | Terms of Service & Privacy Hub</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: clean & organic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafff2;
+            color: #1a2e1f;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, .logo, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        header {
+            background: #0f3b1c;
+            color: #f5fce3;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,20,0,0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #c0e87a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #eef5da;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.05rem;
+        }
+        .nav-links a:hover {
+            color: #dcf59b;
+            transform: translateY(-1px);
+        }
+
+        /* page hero */
+        .legal-hero {
+            background: linear-gradient(120deg, #d4e8c2 0%, #c0ddac 100%);
+            padding: 60px 0 48px;
+            text-align: center;
+        }
+        .legal-hero h1 {
+            font-size: 2.8rem;
+            color: #144d1f;
+            margin-bottom: 12px;
+        }
+        .legal-hero p {
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto;
+            color: #2a4727;
+        }
+
+        /* legal card blocks */
+        .legal-card {
+            background: white;
+            border-radius: 36px;
+            padding: 32px 36px;
+            margin: 48px 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border: 1px solid #e2f0d3;
+        }
+        .legal-card h2 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #1d6325;
+            border-left: 5px solid #6bb84e;
+            padding-left: 18px;
+        }
+        .legal-card h3 {
+            font-size: 1.4rem;
+            margin: 24px 0 12px 0;
+            color: #2c6e2f;
+        }
+        .legal-card p, .legal-card li {
+            color: #2a3a25;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .legal-card ul, .legal-card ol {
+            margin: 16px 0 20px 30px;
+        }
+        .legal-card li {
+            margin-bottom: 8px;
+        }
+        .badge-date {
+            background: #eef5e4;
+            border-radius: 60px;
+            padding: 5px 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2d7229;
+            margin-bottom: 20px;
+        }
+        hr.divider-light {
+            margin: 28px 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #cfe5bc, transparent);
+        }
+        .grid-legal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 20px 0;
+        }
+        .info-box {
+            background: #f9fff5;
+            border-radius: 24px;
+            padding: 22px;
+            border-left: 4px solid #7fc35e;
+        }
+        footer {
+            background: #0c2f14;
+            color: #d9e6c3;
+            padding: 48px 0 32px;
+            margin-top: 50px;
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        .footer-address i, .footer-phone i {
+            margin-right: 12px;
+            width: 26px;
+            color: #b6da7a;
+        }
+        .footer-address, .footer-phone {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            border-top: 1px solid #2f613a;
+            padding-top: 24px;
+        }
+        @media (max-width: 780px) {
+            .legal-hero h1 { font-size: 2rem; }
+            .legal-card { padding: 24px; }
+            .grid-legal { grid-template-columns: 1fr; }
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eef3e6;
+            padding: 8px 20px;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #2c6e2f;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #dfecce;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav-flex">
+        <div class="logo">Verdant<span>Vistas</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <div class="legal-hero">
+        <div class="container">
+            <h1>🌱 Grounded in Trust</h1>
+            <p>Terms of Service, Privacy Commitments & Your Garden of Digital Rights</p>
+            <a href="#main-terms" class="back-link"><i class="fas fa-seedling"></i> Read the full terms</a>
+        </div>
+    </div>
+
+    <div class="container" id="main-terms">
+        <!-- TERMS OF SERVICE SECTION -->
+        <div class="legal-card">
+            <span class="badge-date"><i class="far fa-calendar-alt"></i> Effective date: March 24, 2026</span>
+            <h2><i class="fas fa-file-contract"></i> Terms of Service</h2>
+            <p>Welcome to Verdant Vistas ("we", "us", "our"). By accessing or using our website (<strong>www.verdantvistas.com</strong>) and related gardening resources, you agree to comply with and be bound by the following terms. If you do not agree, please refrain from using our services. These terms form a binding agreement between you and Verdant Vistas — rooted in transparency, just like healthy soil.</p>
+            
+            <h3>1. Use of Our Content & Intellectual Property</h3>
+            <p>All gardening guides, images (including curated botanical photography), written content exceeding 78,000+ words, graphics, logos, and digital assets are the property of Verdant Vistas or its content partners. You may view, download, and print content for personal, non-commercial use only. Any reproduction, redistribution, or unauthorized use of our comprehensive almanac, unique soil science articles, or visual galleries for commercial purposes is strictly prohibited without explicit written consent. You may, however, share snippets with attribution to spread the love of gardening.</p>
+            
+            <h3>2. Community & Gardener’s Conduct</h3>
+            <p>We encourage a respectful, inspiring community. When you comment, submit questions, or interact via contact forms, you agree not to post harmful, spam, or misleading content. We reserve the right to moderate, remove, or edit any user-generated contributions that violate the spirit of regenerative gardening and mutual respect. Verdant Vistas is not responsible for third-party content.</p>
+            
+            <h3>3. Products, Services & Third-Party Links</h3>
+            <p>Our website may include references to gardening tools, heirloom seed suppliers, or educational workshops. Any external links are provided for convenience only; we do not endorse nor assume responsibility for the content or practices of third-party websites. Purchases made via affiliate links (if any) are subject to the respective merchant’s terms. We may offer free downloadable resources (planting calendars, guides) "as is" without warranties.</p>
+            
+            <h3>4. Disclaimer of Warranties & Limitation of Liability</h3>
+            <p>The gardening information provided — including soil recipes, pest management, and seasonal tasks — is based on extensive horticultural research, but nature involves variables beyond our control. We do not guarantee specific harvest results, plant survival, or freedom from allergic reactions. All content is for educational and inspirational purposes. To the fullest extent permitted by law, Verdant Vistas disclaims any liability for loss, crop failure, injury, or property damage arising from use of our advice.</p>
+            
+            <h3>5. Modifications & Termination</h3>
+            <p>We reserve the right to update these Terms at any time. Continued use after changes constitutes acceptance. We may also suspend access to the website for maintenance or any breach of these terms.</p>
+            
+            <h3>6. Governing Law</h3>
+            <p>These Terms shall be governed by the laws of the State of California, without regard to conflict of law principles. Any disputes shall be resolved in the courts located in Willowdale County, CA.</p>
+            <p><i class="fas fa-hand-peace"></i> By immersing yourself in our green sanctuary, you acknowledge that you have read, understood, and agreed to these Terms of Service.</p>
+        </div>
+
+        <!-- PRIVACY POLICY SECTION (expanded, unique) -->
+        <div class="legal-card">
+            <h2><i class="fas fa-user-shield"></i> Privacy Policy</h2>
+            <p>Your privacy matters deeply to us — just as the delicate microbiome beneath your garden beds. This policy describes how we collect, use, and safeguard information when you visit Verdant Vistas. We align with global data protection principles and California privacy rights (CCPA).</p>
+            
+            <div class="grid-legal">
+                <div class="info-box">
+                    <i class="fas fa-database" style="font-size: 1.8rem; color: #46822e; margin-bottom: 12px; display: inline-block;"></i>
+                    <h3 style="margin-top: 0;">Information We Collect</h3>
+                    <p><strong>Personal data:</strong> Name, email address, postal code (only if you subscribe to our newsletter, download free guides, or contact us via the gardening hotline). <strong>Non-personal data:</strong> IP address, browser type, pages visited, and interaction with our 78k+ word gardening almanac — collected via cookies and analytics to improve user experience.</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-cookie-bite" style="font-size: 1.8rem; color: #46822e; margin-bottom: 12px; display: inline-block;"></i>
+                    <h3 style="margin-top: 0;">Cookies & Tracking</h3>
+                    <p>We use essential and functional cookies to remember preferences, plus analytics cookies to understand which garden guides are most loved. You may manage cookie settings via browser controls. Third-party services (like image hosting or Google Fonts) may also set cookies — refer to our separate <a href="cookies.html" style="color: #3f873a; text-decoration: underline;">Cookies Policy</a> for details.</p>
+                </div>
+            </div>
+
+            <h3>How We Use Your Information</h3>
+            <p>🌿 To provide, personalize, and improve our gardening encyclopedia, monthly planting reminders, and upcoming regenerative workshops.<br>
+            🌿 To respond to inquiries sent via the contact form or email (hello@verdantvistas.com).<br>
+            🌿 To send occasional newsletters with exclusive heirloom variety spotlights, only if you opt-in. You can unsubscribe anytime with one click.<br>
+            🌿 To analyze website traffic and enhance the user experience — we never sell your personal information to third parties.</p>
+
+            <h3>Data Security & Retention</h3>
+            <p>We implement industry-standard safeguards (SSL encryption, limited access) to protect your data. Personal information is retained only as long as necessary to fulfill the purposes outlined, or as required by law. In the unlikely event of a data breach, we will notify affected users in accordance with legal obligations.</p>
+            
+            <h3>Your Rights (California & GDPR aligned)</h3>
+            <p>Depending on your location, you may have the right to access, correct, delete, or restrict processing of your personal data. To exercise these rights, contact us at <strong>privacy@verdantvistas.com</strong> or via postal address: Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923. We will respond within 30 days. You also have the right to lodge a complaint with a supervisory authority.</p>
+            
+            <h3>Children’s Privacy</h3>
+            <p>Our gardening resources are intended for general audiences and do not knowingly collect data from children under 13. If we discover such data, we will delete it promptly.</p>
+            <hr class="divider-light">
+            <p><i class="fas fa-leaf"></i> <strong>Policy Updates:</strong> This Privacy Policy may evolve as our digital garden grows. The latest version will always be posted here with the effective date. We encourage you to review periodically.</p>
+        </div>
+
+        <!-- COOKIES & ADDITIONAL LEGAL NOTES (extended for full transparency) -->
+        <div class="legal-card">
+            <h2><i class="fas fa-info-circle"></i> Additional Legal Notes & Garden Ethics</h2>
+            <div class="grid-legal">
+                <div>
+                    <h3>🍪 Cookies & Similar Technologies</h3>
+                    <p>We use first-party cookies to remember your preferred language, display settings, and to gather anonymous analytics via privacy-friendly tools. You can configure your browser to reject cookies, but some site functionality may be limited. We do not use invasive tracking or share behavioral data with advertisers. For detailed cookie inventory, please visit our <a href="cookies.html" style="color: #2c6e2f; font-weight: 500;">Cookies Policy</a>.</p>
+                </div>
+                <div>
+                    <h3>🌍 Intellectual Property & Image Credits</h3>
+                    <p>All photographic imagery used on Verdant Vistas (including placeholder images via Lorem Picsum for illustrative gardening concepts) are licensed for editorial use or represent beautiful garden scenes. Original graphic design, layout, and unique textual content (soil masterclasses, month-by-month tasklists, heirloom catalogs) are protected by copyright © 2026 Verdant Vistas. Unauthorized scraping or AI training usage is prohibited.</p>
+                </div>
+            </div>
+            <h3>Disclaimer: No Medical or Professional Advice</h3>
+            <p>Information regarding herbal plants, medicinal herbs, or edible flowers is for educational purposes only. Always consult a qualified professional before ingesting unfamiliar plants or using essential oils. Gardening involves physical activity — use proper tools and techniques to avoid injury. Our content does not replace professional landscaping or horticultural consultation for large-scale projects.</p>
+            <h3>Contact for Legal Matters</h3>
+            <p>If you have any questions about these Terms, Privacy Policy, or wish to report a copyright concern, please contact our legal steward:</p>
+            <p><i class="fas fa-envelope"></i> legal@verdantvistas.com<br>
+            <i class="fas fa-phone-alt"></i> +1 (831) 764-0923 (business hours)<br>
+            <i class="fas fa-map-pin"></i> Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923, United States</p>
+            <hr class="divider-light">
+            <p style="font-style: italic;">"By tending the digital soil with honesty, we cultivate trust — just as compost nurtures tomorrow’s blooms."</p>
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Return to the Garden</a>
+            </div>
+        </div>
+
+        <!-- final note about harmonizing with main site's 78k+ words ethos -->
+        <div style="background: #eaf5e2; border-radius: 32px; padding: 24px 30px; margin-bottom: 40px; text-align: center;">
+            <i class="fas fa-seedling" style="font-size: 2rem; color: #3b7840; opacity: 0.9;"></i>
+            <p style="margin-top: 12px;"><strong>Verdant Vistas commitment:</strong> Your privacy is as essential as heirloom biodiversity. We maintain full compliance with digital regulations, mirroring the care we dedicate to organic gardening. These legal documents are part of our open, honest ecosystem — ensuring your data remains safe while you explore our 78,000+ word horticultural library.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-info">
+                <div class="footer-address"><i class="fas fa-map-marker-alt"></i> Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923</div>
+                <div class="footer-phone"><i class="fas fa-phone-alt"></i> +1 (831) 764-0923 | Gardening Hotline</div>
+                <div style="margin-top: 12px;"><i class="fas fa-envelope"></i> hello@verdantvistas.com</div>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-pinterest" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-youtube" style="font-size: 1.7rem;"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Verdant Vistas — Rooted in nature. Orvessa Vine Harbor: a sanctuary for growers. Terms of Service & Privacy — your rights, our promise.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

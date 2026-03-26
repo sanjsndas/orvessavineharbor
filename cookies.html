@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Verdant Vistas | Cookies Policy — Our Digital Seed Library</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: clean & organic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafff2;
+            color: #1a2e1f;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, .logo, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav (mirror contact page) */
+        header {
+            background: #0f3b1c;
+            color: #f5fce3;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,20,0,0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #c0e87a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #eef5da;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1.05rem;
+        }
+        .nav-links a:hover {
+            color: #dcf59b;
+            transform: translateY(-1px);
+        }
+        .nav-links li {
+            list-style: none;
+        }
+
+        /* page hero */
+        .cookies-hero {
+            background: linear-gradient(135deg, #e2f0d3, #cbe8b5);
+            padding: 60px 0 50px;
+            text-align: center;
+            border-bottom: 1px solid #b7da92;
+        }
+        .cookies-hero h1 {
+            font-size: 3rem;
+            color: #144d1f;
+            margin-bottom: 16px;
+        }
+        .cookies-hero p {
+            font-size: 1.2rem;
+            max-width: 760px;
+            margin: 0 auto;
+            color: #2a4727;
+        }
+        .cookie-icon-big {
+            font-size: 3.2rem;
+            color: #467a35;
+            margin-bottom: 12px;
+        }
+
+        /* content card style */
+        .policy-card {
+            background: white;
+            border-radius: 40px;
+            padding: 42px 40px;
+            margin: 60px 0 40px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.04);
+            transition: all 0.2s ease;
+        }
+        .policy-section {
+            margin-bottom: 42px;
+            border-bottom: 1px solid #e3f0d6;
+            padding-bottom: 32px;
+        }
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .policy-section h2 {
+            font-size: 1.8rem;
+            color: #256f2a;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .policy-section h2 i {
+            font-size: 1.7rem;
+            color: #558f3a;
+        }
+        .policy-section h3 {
+            font-size: 1.3rem;
+            margin: 20px 0 10px 0;
+            color: #3c7135;
+        }
+        .policy-section p, .policy-section li {
+            color: #2a3a24;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .policy-section ul, .cookies-table {
+            margin: 20px 0 20px 24px;
+        }
+        .cookies-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fafef4;
+            border-radius: 24px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .cookies-table th, .cookies-table td {
+            border: 1px solid #d0e6bc;
+            padding: 14px 18px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .cookies-table th {
+            background: #e2f0cf;
+            font-weight: 700;
+            color: #1e571f;
+        }
+        .badge-consent {
+            background: #eef3e6;
+            border-radius: 60px;
+            padding: 20px 28px;
+            margin: 30px 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn-consent {
+            background: #2c6e2f;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-consent:hover {
+            background: #1d5420;
+            transform: scale(1.01);
+        }
+        .btn-secondary {
+            background: #e2e9d9;
+            color: #2a5c29;
+            margin-left: 12px;
+        }
+        .consent-message {
+            background: #cfe7c0;
+            border-radius: 36px;
+            padding: 14px 22px;
+            margin-top: 24px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .green-well {
+            background: #eef6e4;
+            border-radius: 48px;
+            padding: 28px 32px;
+            margin: 30px 0 50px;
+        }
+        footer {
+            background: #0c2f14;
+            color: #d9e6c3;
+            padding: 48px 0 32px;
+            margin-top: 50px;
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        .footer-address i, .footer-phone i {
+            margin-right: 12px;
+            width: 26px;
+            color: #b6da7a;
+        }
+        .footer-address, .footer-phone {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            border-top: 1px solid #2f613a;
+            padding-top: 24px;
+        }
+        @media (max-width: 780px) {
+            .policy-card {
+                padding: 28px 22px;
+            }
+            .cookies-hero h1 {
+                font-size: 2.3rem;
+            }
+            .cookies-table th, .cookies-table td {
+                padding: 10px 12px;
+            }
+        }
+        .highlight {
+            background: #f5fceb;
+            border-left: 5px solid #578f3a;
+            padding: 16px 22px;
+            border-radius: 24px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav-flex">
+        <div class="logo">Verdant<span>Vistas</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- hero section with cookie theme -->
+    <div class="cookies-hero">
+        <div class="container">
+            <div class="cookie-icon-big"><i class="fas fa-cookie-bite"></i> 🍪 <i class="fas fa-seedling"></i></div>
+            <h1>Cookies & Garden Bites Policy</h1>
+            <p>We use digital breadcrumbs — just like compost enriches soil — to improve your journey. Read how we respect your privacy while you explore our horticultural resources.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- main policy card -->
+        <div class="policy-card">
+            <div class="policy-section">
+                <h2><i class="fas fa-info-circle"></i> What are cookies?</h2>
+                <p>Cookies are small text files stored on your device when you visit Verdant Vistas. They help us remember your preferences (like language or garden zone), analyze visitor trends, and make our website more functional — much like a well-planned crop rotation. We never sell your data; cookies just help our digital garden flourish.</p>
+                <p>This policy explains the types of cookies we use, why we use them, and how you can manage your consent. By using our site, you agree to the use of cookies as described, unless you adjust your browser settings or use our consent tool below.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-list-ul"></i> Types of cookies we sow</h2>
+                <table class="cookies-table">
+                    <thead>
+                        <tr><th>Cookie Category</th><th>Purpose</th><th>Examples & Duration</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Essential (strictly necessary)</strong></td><td>These ensure core functionality: security, network management, and accessibility. You cannot opt out of these.</td><td>Session cookies (expire after browser close). Used for form submissions, privacy preferences.</td></tr>
+                        <tr><td><strong>Preference & Functional</strong></td><td>Remember your choices like region (USDA hardiness zone), favorite garden content, or whether you've seen our newsletter popup.</td><td>‘gardening_zone’ (30 days), ‘language_pref’ (1 year).</td></tr>
+                        <tr><td><strong>Analytics & Performance</strong></td><td>Help us understand how visitors interact with our almanac, workshop pages, and contact forms. We use aggregated data to improve.</td><td>Google Analytics (_ga, _gid) — anonymized IP, 2 years max. Also, internal pageview counters.</td></tr>
+                        <tr><td><strong>Marketing / Social Media</strong></td><td>Allow social sharing buttons (Instagram, Pinterest) and limited remarketing to show relevant garden content. We keep this minimal.</td><td>Third-party cookies from embedded YouTube videos or Pinterest save button. Consent required.</td></tr>
+                    </tbody>
+                </table>
+                <div class="highlight">
+                    <i class="fas fa-shield-alt"></i> <strong>Your privacy, our pledge:</strong> We never use intrusive tracking. Any third-party cookies are strictly limited to enhancing your experience — like watching our “composting 101” video on YouTube.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-sliders-h"></i> Manage your cookie preferences</h2>
+                <p>You’re in control. You can change your cookie settings at any time using our consent manager below, or through your browser settings. Please note: disabling essential cookies may affect site functionality (e.g., contact form submission or remembering your preferences).</p>
+                <div id="cookieConsentBox" class="badge-consent">
+                    <span><i class="fas fa-cookie"></i> <strong>Current consent status:</strong> <span id="consentStatusText">Not yet chosen</span></span>
+                    <div>
+                        <button id="acceptCookiesBtn" class="btn-consent"><i class="fas fa-check-circle"></i> Accept all cookies</button>
+                        <button id="declineNonEssentialBtn" class="btn-consent btn-secondary"><i class="fas fa-ban"></i> Reject non-essential</button>
+                    </div>
+                </div>
+                <div id="consentFeedback" style="margin-top: 6px;"></div>
+                <p style="margin-top: 18px; font-size: 0.9rem;"><i class="fas fa-cog"></i> You can also manage cookies directly in your browser: visit <strong>Settings → Privacy & Security → Cookies</strong>. Deleting cookies will reset your preferences.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-database"></i> Third-party services & embedded content</h2>
+                <p>Our gardening sanctuary may include embedded videos (YouTube), social media feeds, and interactive maps (OpenStreetMap). These services may set their own cookies. We only include them after ensuring they align with eco-conscious values. For more details, refer to:</p>
+                <ul>
+                    <li><i class="fab fa-youtube"></i> <a href="https://policies.google.com/privacy" target="_blank" style="color:#3f7841;">Google/YouTube Privacy Policy</a></li>
+                    <li><i class="fab fa-instagram"></i> <a href="https://help.instagram.com/519522125107875" target="_blank" style="color:#3f7841;">Instagram Cookie Policy</a></li>
+                    <li><i class="fas fa-chart-line"></i> Google Analytics — we use IP anonymization and data retention controls.</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-calendar-week"></i> How long do we store cookies?</h2>
+                <p>Session cookies expire when you close your browser. Persistent cookies have durations ranging from 30 days up to 2 years (for analytics). We regularly review and purge obsolete cookies. Our functional preferences (like garden zone reminder) last 12 months unless you clear them.</p>
+                <p>If you have any questions regarding our cookie practices, please email <strong>privacy@verdantvistas.com</strong> or use our <a href="contact.html" style="color:#3f7841;">contact page</a>.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-child"></i> Updates to this Cookies Policy</h2>
+                <p>We may update this policy occasionally to reflect changes in technology or regulations. The “last updated” date at the bottom will indicate the latest revision. We encourage you to review it periodically. Your continued use of Verdant Vistas after modifications signifies acceptance.</p>
+                <p><i class="fas fa-tree"></i> <strong>Last updated:</strong> March 24, 2026 — aligned with GDPR & CCPA best practices, honoring your digital autonomy.</p>
+            </div>
+        </div>
+
+        <!-- additional green banner: fun cookie fact & analogies -->
+        <div class="green-well">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+                <div>
+                    <i class="fas fa-seedling" style="font-size: 2rem; color:#417d33;"></i>
+                    <h3 style="margin-top: 8px;">🌿 A gardener’s analogy</h3>
+                    <p>Just as mulch preserves moisture and nurtures the soil, cookies help us remember your gardening path — without ever harming your privacy. We treat your data like heirloom seeds: with respect, transparency, and care.</p>
+                </div>
+                <div style="background: #ffffffaa; border-radius: 48px; padding: 12px 24px; text-align: center;">
+                    <i class="fas fa-hand-peace"></i> <strong>You're always in control</strong><br> <span style="font-size:0.85rem;">Revoke consent anytime via the panel above.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- further legal context / link to privacy policy -->
+        <div style="background: #fff7e8; border-radius: 32px; padding: 24px 30px; margin: 10px 0 50px; border: 1px solid #cfe1b5;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+                <i class="fas fa-file-alt" style="font-size: 2.2rem; color: #548c2f;"></i>
+                <div>
+                    <strong>Related policies:</strong> See our <a href="privacy.html" style="color:#2a722a; text-decoration: underline;">Privacy Policy</a> for how we process personal data beyond cookies, and our <a href="terms.html" style="color:#2a722a;">Terms of Use</a>. Together they form the roots of your trusted experience.
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-info">
+                <div class="footer-address"><i class="fas fa-map-marker-alt"></i> Orvessa Vine Harbor, 42 Greenway Lane, Willowdale, CA 93923</div>
+                <div class="footer-phone"><i class="fas fa-phone-alt"></i> +1 (831) 764-0923 | Gardening Hotline</div>
+                <div style="margin-top: 12px;"><i class="fas fa-envelope"></i> hello@verdantvistas.com</div>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-pinterest" style="font-size: 1.7rem; margin-right: 18px;"></i>
+                <i class="fab fa-youtube" style="font-size: 1.7rem;"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Verdant Vistas — Rooted in nature. Orvessa Vine Harbor: a sanctuary for growers. Cookie-friendly from seed to harvest.
+        </div>
+    </div>
+</footer>
+
+<!-- cookie consent simulation with localStorage (real preference persistence) -->
+<script>
+    (function() {
+        // helper: get consent status
+        const consentStatusSpan = document.getElementById('consentStatusText');
+        const acceptBtn = document.getElementById('acceptCookiesBtn');
+        const declineBtn = document.getElementById('declineNonEssentialBtn');
+        const feedbackDiv = document.getElementById('consentFeedback');
+
+        // possible states: 'accepted', 'declined_non_essential', null
+        function updateConsentUI() {
+            const consent = localStorage.getItem('verdant_cookie_consent');
+            if (consent === 'all_accepted') {
+                consentStatusSpan.innerHTML = '<i class="fas fa-check-circle" style="color:#2c6e2f;"></i> All cookies accepted (essential + analytics + preferences)';
+            } else if (consent === 'non_essential_declined') {
+                consentStatusSpan.innerHTML = '<i class="fas fa-shield-alt"></i> Only essential cookies are active. Non-essential (analytics, marketing) are blocked.';
+            } else {
+                consentStatusSpan.innerHTML = '<i class="fas fa-exclamation-triangle"></i> No preference saved — defaults to essential only. Use buttons to customize.';
+                // default behavior: we treat as essential only until user chooses
+                if(!localStorage.getItem('verdant_cookie_consent')) {
+                    // We can simulate that no consent given means only essential (implicit)
+                    // but UI shows neutral.
+                }
+            }
+        }
+
+        function setConsent(type) {
+            if (type === 'accept') {
+                localStorage.setItem('verdant_cookie_consent', 'all_accepted');
+                // In a real implementation, this would enable analytics & marketing scripts
+                // For demo, show feedback and simulate enabling.
+                feedbackDiv.innerHTML = '<div class="consent-message"><i class="fas fa-leaf"></i> Thank you! You accepted all cookies. Analytics and personalization features are now active — this enhances your garden journey.</div>';
+                simulateScriptConsent(true);
+            } else if (type === 'decline') {
+                localStorage.setItem('verdant_cookie_consent', 'non_essential_declined');
+                feedbackDiv.innerHTML = '<div class="consent-message"><i class="fas fa-lock"></i> You rejected non-essential cookies. Only strictly necessary cookies will operate. You can change this anytime.</div>';
+                simulateScriptConsent(false);
+            }
+            updateConsentUI();
+            // auto-clear feedback after 5 seconds
+            setTimeout(() => {
+                if(feedbackDiv.innerHTML) {
+                    feedbackDiv.innerHTML = '';
+                }
+            }, 5500);
+        }
+
+        // dummy function to represent real-world consent management for GA etc.
+        function simulateScriptConsent(allowed) {
+            if(allowed) {
+                console.log("🌿 Verdant Vistas: Analytics & optional cookies enabled (simulation).");
+                // In production you would load GA or other tags dynamically
+            } else {
+                console.log("🌱 Verdant Vistas: Non-essential cookies disabled — privacy first.");
+            }
+        }
+
+        // Event listeners
+        if(acceptBtn) {
+            acceptBtn.addEventListener('click', () => setConsent('accept'));
+        }
+        if(declineBtn) {
+            declineBtn.addEventListener('click', () => setConsent('decline'));
+        }
+
+        // load saved consent and apply
+        const existingConsent = localStorage.getItem('verdant_cookie_consent');
+        if(existingConsent === 'all_accepted') {
+            simulateScriptConsent(true);
+        } else if(existingConsent === 'non_essential_declined') {
+            simulateScriptConsent(false);
+        } else {
+            // default: no non-essential scripts (simulate essential only)
+            simulateScriptConsent(false);
+        }
+        updateConsentUI();
+
+        // Optional: reset message style for user
+    })();
+</script>
+<!-- additional note: this page mirrors the design system from contact.html but introduces detailed cookie policy + consent banner manager -->
+</body>
+</html>
